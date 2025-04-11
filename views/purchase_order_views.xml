@@ -8,13 +8,13 @@
             <field name="arch" type="xml">
                 <button name="button_confirm" position="after">
                     <button name="autorizar_solicitante" type="object" groups="jcdecauxgtcustom.jc_solicitante" invisible="state != 'draft' " string="Autorizar"/>
-                    <button name="jefe_director" type="object" groups="jcdecauxgtcustom.jc_jefe_director" invisible="state != 'draft' " string="Autorizar"/> 
-                    <button name="director_financiero_local" type="object" groups="jcdecauxgtcustom.jc_directo_financiero_local" invisible="state != 'draft' " string="Autorizar"/> 
-                    <button name="gerente_general_local" type="object" groups="jcdecauxgtcustom.jc_gerente_general_local" invisible="state != 'draft' " string="Autorizar"/> 
-                    <button name="gerente_compras_ca" type="object" groups="jcdecauxgtcustom.jc_gerente_compras_ca" invisible="state != 'draft' " string="Autorizar"/> 
-                    <button name="director_proceso_ca" type="object" groups="jcdecauxgtcustom.jc_director_proceso_ca" invisible="state != 'draft' " string="Autorizar"/> 
-                    <button name="director_financiero_ca" type="object" groups="jcdecauxgtcustom.jc_director_financiero_ca" invisible="state != 'draft' " string="Autorizar"/> 
-                    <button name="director_general_ca" type="object" groups="jcdecauxgtcustom.jc_director_general_ca" invisible="state != 'draft' " string="Autorizar"/> 
+                    <button name="autorizar_jefe_director" type="object" groups="jcdecauxgtcustom.jc_jefe_director" invisible="state != 'draft' " string="Autorizar"/> 
+                    <button name="autorizar_director_financiero_local" type="object" groups="jcdecauxgtcustom.jc_directo_financiero_local" invisible="state != 'draft' " string="Autorizar"/> 
+                    <button name="autorizar_gerente_general_local" type="object" groups="jcdecauxgtcustom.jc_gerente_general_local" invisible="state != 'draft' " string="Autorizar"/> 
+                    <button name="autorizar_gerente_compras_ca" type="object" groups="jcdecauxgtcustom.jc_gerente_compras_ca" invisible="state != 'draft' " string="Autorizar"/> 
+                    <button name="autorizar_director_proceso_ca" type="object" groups="jcdecauxgtcustom.jc_director_proceso_ca" invisible="state != 'draft' " string="Autorizar"/> 
+                    <button name="autorizar_director_financiero_ca" type="object" groups="jcdecauxgtcustom.jc_director_financiero_ca" invisible="state != 'draft' " string="Autorizar"/> 
+                    <button name="autorizar_director_general_ca" type="object" groups="jcdecauxgtcustom.jc_director_general_ca" invisible="state != 'draft' " string="Autorizar"/> 
                 </button>
             </field>
         </record>
