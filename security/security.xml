@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="jc_solicitante" model="res.groups">
+        <field name="name">Solicitante</field>
+        <field name="comment">Solicitante</field>
+    </record>
+
+     <record id="jc_jefe_director" model="res.groups">
+        <field name="name">Jefe/Director del Área/Proceso Local</field>
+        <field name="comment">Jefe/Director del Área/Proceso Local</field>
+    </record>
+
+     <record id="jc_directo_financiero_local" model="res.groups">
+        <field name="name">Director financiero Local</field>
+        <field name="comment">Director financiero Local</field>
+    </record>
+
+     <record id="jc_gerente_general_local" model="res.groups">
+        <field name="name">Gerente General Local</field>
+        <field name="comment">Gerente General Local</field>
+    </record>
+
+     <record id="jc_gerente_compras_ca" model="res.groups">
+        <field name="name">Gerente de Compras Centroamérica, Caribe y Colombia (CENTRAM)</field>
+        <field name="comment">Gerente de Compras Centroamérica, Caribe y Colombia (CENTRAM)</field>
+    </record>
+
+     <record id="jc_director_proceso_ca" model="res.groups">
+        <field name="name">Director del Proceso/área Centroamérica, Caribe y Colombia (CENTRAM)</field>
+        <field name="comment">Director del Proceso/área Centroamérica, Caribe y Colombia (CENTRAM)</field>
+    </record>
+
+     <record id="jc_director_financiero_ca" model="res.groups">
+        <field name="name">Director Financiero Centroamérica, Caribe y Colombia (CENTRAM)</field>
+        <field name="comment">Director Financiero Centroamérica, Caribe y Colombia (CENTRAM)</field>
+    </record>
+
+     <record id="jc_director_general_ca" model="res.groups">
+        <field name="name">Director General Centroamérica, Caribe y Colombia (CENTRAM)</field>
+        <field name="comment">Director General Centroamérica, Caribe y Colombia (CENTRAM)</field>
+    </record>
+
+</odoo>
