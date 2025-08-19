@@ -15,6 +15,7 @@
                     <button name="autorizar_director_proceso_ca" type="object" groups="jcdecauxgtcustom.jc_director_proceso_ca" invisible="state != 'draft' " string="Autorizar"/> 
                     <button name="autorizar_director_financiero_ca" type="object" groups="jcdecauxgtcustom.jc_director_financiero_ca" invisible="state != 'draft' " string="Autorizar"/> 
                     <button name="autorizar_director_general_ca" type="object" groups="jcdecauxgtcustom.jc_director_general_ca" invisible="state != 'draft' " string="Autorizar"/> 
+                    <button name="no_autorizar" type="object" invisible="state != 'draft' " string="No autorizar"/> 
                 </button>
             </field>
         </record>
