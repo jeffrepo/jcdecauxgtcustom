@@ -107,28 +107,23 @@ class PurchaseOrder(models.Model):
     def button_confirm(self):
         res = super().button_confirm()
         for order in self:
-            group_solicitante = self.env.ref('jcdecauxgtcustom.jc_solicitante')
-            
-            if order.currency_id.name == "USD":
-                if order.amount_total <= 1499:
-                    if order.solicitante and order.jefe_director and order.director_financiero_local and order.gerente_general_local:
-                        return res
-                    else:
-                        raise UserError(_("La orden debe de ser validada por los primeros 4 autorizadores"))
-
-                        #raise UserError(_("La orden debe de ser validada por los primeros 4 autorizadores"))
-                if order.amount_total >= 1500 and order.amount_total <= 2999:
-                    if order.solicitante and order.jefe_director and order.director_financiero_local and order.gerente_general_local and order.gerente_compras_ca:
-                        return res
-                    else:
-                        raise UserError(_("La orden debe de ser validada por los primeros 5 autorizadores"))
-                if order.amount_total >= 3000 and order.amount_total <= 9999:
-                    if order.solicitante and order.jefe_director and order.director_financiero_local and order.gerente_general_local and order.gerente_compras_ca and order.director_proceso_ca and order.director_financiero_ca:
-                        return res
-                    else:
-                        raise UserError(_("La orden debe de ser validada por los primeros 7 autorizadores"))
-                if order.amount_total >= 10000:
-                    if order.solicitante and order.jefe_director and order.director_financiero_local and order.gerente_general_local and order.gerente_compras_ca and order.director_proceso_ca and order.director_financiero_ca and order.director_general_ca:
-                        return res
-                    else:
-                        raise UserError(_("La orden debe de ser validada por los primeros 7 autorizadores"))
+            if order.amount_total <= 1499:
+                if order.solicitante and order.jefe_director and order.director_financiero_local and order.gerente_general_local:
+                    return res
+                else:
+                    raise UserError(_("La orden debe de ser validada por los primeros 4 autorizadores"))
+            if order.amount_total >= 1500 and order.amount_total <= 2999:
+                if order.solicitante and order.jefe_director and order.director_financiero_local and order.gerente_general_local and order.gerente_compras_ca:
+                    return res
+                else:
+                    raise UserError(_("La orden debe de ser validada por los primeros 5 autorizadores"))
+            if order.amount_total >= 3000 and order.amount_total <= 9999:
+                if order.solicitante and order.jefe_director and order.director_financiero_local and order.gerente_general_local and order.gerente_compras_ca and order.director_proceso_ca and order.director_financiero_ca:
+                    return res
+                else:
+                    raise UserError(_("La orden debe de ser validada por los primeros 7 autorizadores"))
+            if order.amount_total >= 10000:
+                if order.solicitante and order.jefe_director and order.director_financiero_local and order.gerente_general_local and order.gerente_compras_ca and order.director_proceso_ca and order.director_financiero_ca and order.director_general_ca:
+                    return res
+                else:
+                    raise UserError(_("La orden debe de ser validada por los primeros 7 autorizadores"))
