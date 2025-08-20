@@ -14,6 +14,7 @@
     'data': [
         'security/security.xml',
         'views/purchase_order_views.xml',
+        'wizard/comentario_wizard.xml',
     ],
     'demo': [
     ],

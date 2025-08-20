@@ -20,10 +20,17 @@ class PurchaseOrder(models.Model):
 
     def no_autorizar(self,):
         for compra in self:
-            compra.no_autorizado = True
-            mensaje = "Solicitud no aprobada por: " + self.env.user.name
-            self.message_post(body= mensaje, subject="Solicitud no aprobada", email_from=False)
-        return True
+            orden = compra.id
+            ctx = {'usuario': self.env.user.name, 'orden': orden}
+            return {
+                'name': _('No Autorizar orden'),
+                'view_mode': 'form',
+                'res_model': 'comentario.wizard',
+                'view_id': self.env.ref('jcdecauxgtcustom.jcdcaux_comentario_wizard_view').id,
+                'type': 'ir.actions.act_window',
+                'context': ctx,
+                'target': 'new'
+            }
 
     def autorizar_solicitante(self):
         for compra in self:

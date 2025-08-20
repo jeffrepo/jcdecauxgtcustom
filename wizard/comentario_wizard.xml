@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+
+        <record id="jcdcaux_comentario_wizard_view" model="ir.ui.view">
+            <field name="name">jcdcaux.comentario.wizard.form</field>
+            <field name="model">comentario.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Warning">
+                    <group>
+                        <field name="message"/>
+                    </group>
+                    <footer>
+                        <button name="confirmar" string="Enviar comentario" type="object" class="oe_highlight"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="comentario_wizard_action" model="ir.actions.act_window">
+            <field name="name">Comentario</field>
+            <field name="res_model">comentario.wizard</field>
+            <field name="view_id" ref="jcdcaux_comentario_wizard_view"/>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>
